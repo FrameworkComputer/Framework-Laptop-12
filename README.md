@@ -14,3 +14,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 ## Mainboard
 
 This folder contains interface schematics to enable Mainboard re-use.
+
+## Input Deck
+
+This folder contains interface schematics to enable Input Deck re-use.

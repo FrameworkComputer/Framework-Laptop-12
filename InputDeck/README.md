@@ -1,0 +1,81 @@
+# Input Deck
+
+## License
+
+Framework Laptop 12 © 2025 by Framework Computer Inc is licensed under CC BY 4.0.
+To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/
+
+## Layout
+
+The input deck includes the touchpad and keyboard.
+There is one main PCB, which we will call the touchpad PCB.
+It includes the Pixart 239 touchpad IC and IT8801 keyboard controler.
+
+The keyboard matrix connects to the touchpad PCB through an FPC connector.
+
+## Pinouts
+
+### Touchpad PCB to Mainboard
+
+Connection is made through an FPC daughterboard that has pads for two sets of 10 pogo pins.
+See the pinout for that on the mainboard README.md
+
+Pinout for touchpad PCB to the daughterboard:
+
+| Pin | Signal     | Notes               |
+|-----|------------|---------------------|
+| 1   | 5VS_TP     |                     |
+| 2   | 5VS_TP     |                     |
+| 3   | KBL_P      |                     |
+| 4   | KBL_P      |                     |
+| 5   | 3VS_TP     |                     |
+| 6   | TP_I2C_CLK | Touchpad I2C        |
+| 7   | TP_I2C_SDA | Touchpad I2C        |
+| 8   | TP_INT#    |                     |
+| 9   | BOARD_ID   |                     |
+| 10  | KB_I2C_SCL | Keyboard I2C        |
+| 11  | KB_I2C_SDA | Keyboard I2C        |
+| 12  | KB_INT     | Keyboard I2C        |
+| 13  | KSI_03_IN  | Shorted to pin 2    |
+| 14  | KSI_03_OUT | Shorted to pin 1    |
+| 15  | KSI_02_IN  | Shorted to pin 4    |
+| 16  | KSI_02_OUT | Shorted to pin 3    |
+| 17  | KSI_00_IN  | Shorted to pin 6    |
+| 18  | KSI_00_OUT | Shorted to pin 5    |
+| 19  | GND        |                     |
+| 20  | GND        |                     |
+| 21  | GND        |                     |
+| 22  | GND        |                     |
+
+### Touchpad to Keyboard
+
+| Pin | Signal     |
+|-----|------------|
+| 1   | KSI_00_IN  |
+| 2   | KSI1       |
+| 3   | KSI2       |
+| 4   | KSI_03_IN  |
+| 5   | KSI4       |
+| 6   | KSI5       |
+| 7   | KSI6       |
+| 8   | KSI7       |
+| 9   | KSO0       |
+| 10  | KSO1       |
+| 11  | KSO_02_IN  |
+| 12  | KSO3       |
+| 13  | KSO4       |
+| 14  | KSO5       |
+| 15  | KSO6       |
+| 16  | KSO7       |
+| 17  | KSO8       |
+| 18  | KSO9       |
+| 19  | KSO10      |
+| 20  | KSO11      |
+| 21  | KSO12      |
+| 22  | KSO13      |
+| 23  | KSO14      |
+| 24  | KSO15      |
+| 25  | KSO16      |
+| 26  | KSO17      |
+| 27  | CAPS_P     |
+| 28  | CAPS_N     |
