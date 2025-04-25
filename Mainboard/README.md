@@ -21,10 +21,10 @@ This module has not only the webcam but also an accelerometer and a dual-output 
 | 5   | GND          |                         |
 | 6   | USB_DM       | Camera USB              |
 | 7   | USB_DP       | Camera USB              |
-| 8   | 3VS_CAM      |                         |
+| 8   | 3VS_CAM      | Camera IC Power         |
 | 9   | CAM_SW       | Camera privacy switch   |
-| 10  | DMIC_CLK     |                         |
-| 11  | DMIC_DATA    |                         |
+| 10  | DMIC_CLK     | Digital Microphone      |
+| 11  | DMIC_DATA    | Digital Microphone      |
 | 12  | MIC_SW       | Mic privacy switch      |
 | 13  | ALS_INT#     | Reserved                |
 | 14  | I2C_SCL      | Accelerometer I2C       |
@@ -94,16 +94,19 @@ Pin 1 is top left, counting zigzag left, right, left, right downwards.
 
 ## Power Button Daughterboard Interface
 
-| Pin | Signal   | Notes               |
-|-----|----------|---------------------|
-| 1   | USB_DP   | USB2.0 Reserved     |
-| 2   | FP_CTRL  | Reserved            |
-| 3   | USB_DM   | USB2.0 Reserved     |
-| 4   | GND      |                     |
-| 5   | 3V_FP    | 3V Reserved         |
-| 6   | BTN#     | System Power Button |
-| 7   | LED_PWM  |                     |
-| 5   | 5V_LED   |                     |
+Pin 1 is top left, counting zigzag left, right, left, right downwards.
+
+
+| Pin | Signal      | Notes               |
+|-----|-------------|---------------------|
+| 1   | USB_DP      | USB2.0 Reserved     |
+| 2   | BOARD_ID    |                     |
+| 3   | USB_DM      | USB2.0 Reserved     |
+| 4   | GND         |                     |
+| 5   | 3V_MCU      | 3V Reserved         |
+| 6   | ON_OFF_BTN# | System Power Button |
+| 7   | LED_PWM     | Power Button LED    |
+| 5   | 5V_LED      | Power Button LED    |
 
 ## Battery 
 
@@ -120,8 +123,11 @@ Pin 1 is the left-most.
 | 7   | GND      |        |
 | 8   | GND      |        |
 
+The battery provides VRTC voltage to serve as RTC batteyr.
+
 ## Input Cover Interface
 
+Connection is made through two sets of 10 pogo pins.
 Pin count from left to right.
 
 | Conn | Pin | Signal     | Notes               |
@@ -134,8 +140,8 @@ Pin count from left to right.
 | JTP1 | 6   | TP_INT#    |                     |
 | JTP1 | 7   | BOARD_ID   |                     |
 | JTP1 | 8   | KB_I2C_SCL | Keyboard I2C        |
-| JTP1 | 9   | KB_I2C_SDA |                     |
-| JTP1 | 10  | KB_INT     |                     |
+| JTP1 | 9   | KB_I2C_SDA | Keyboard I2C        |
+| JTP1 | 10  | KB_INT     | Keyboard I2C        |
 | JTP2 | 1   | KSI_03_IN  | Shorted to pin 2    |
 | JTP2 | 2   | KSI_03_OUT | Shorted to pin 1    |
 | JTP2 | 3   | KSI_02_IN  | Shorted to pin 4    |
@@ -146,6 +152,8 @@ Pin count from left to right.
 | JTP2 | 8   | GND        |                     |
 | JTP2 | 9   | GND        |                     |
 | JTP2 | 10  | GND        |                     |
+
+Keyboard scan and capslock LED control is going through the I2C keyboard controller.
 
 ## Fan Interface
 
