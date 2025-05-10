@@ -79,3 +79,23 @@ Pinout for touchpad PCB to the daughterboard:
 | 26  | KSO17      |
 | 27  | CAPS_P     |
 | 28  | CAPS_N     |
+
+## Keyboard
+
+### Keyboard Matrix
+
+ANSI layout:
+
+```
+|     |Col 0|Col 1|Col 2|Col 3|Col 4|Col 5|Col 6|Col 7|Col 8|Col 9|Col10|Col11|Col12|Col13|Col14|Col15|Col16|Col17|
+|Row 0|     | F11 | F1  | B   | F10 | N   |     |     | =   |     |RAlt |     |     |     |     |     | FN  |     |
+|Row 1|     | ESC | F4  | G   | F7  | F12 | H   |     | '   | F9  |     | Bsp |     |     |LCtrl|     |     |     |
+|Row 2|     | TAB | F3  | T   | F6  | ]   | Y   |     | [   | Del |     | F8  |     |     |     |     |     |     |
+|Row 3| WIN | `   | F2  | 5   | S   |     | -   |     | 6   |     |     | |   |     |     |RCtrl|     |     |     |
+|Row 4|     | A   | D   | F   | F5  | K   | J   |     | ;   | L   |     |Enter|     |     |     |     |     |     |
+|Row 5|     | 1   | ,   | >   | /   | C   |Space|LShft| X   | V   |     | M   |     |     |     |     |     |     |
+|Row 6|     | Z   | 3   | 4   | 2   | 8   | 0   |     | 7   | 9   |     | Down|Left |LAlt |     |CapsL|     |     |
+|Row 7|     | U   | I   | O   | P   | Q   | W   |RShft| E   | R   |     | Up  |Right|     |     |     |     |     |
+```
+
+Missing on ANSI: 14, 42, 45, 56, 63, 65, 80, 81, 85, 86
