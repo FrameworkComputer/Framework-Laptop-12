@@ -1,4 +1,4 @@
-# Input Deck
+# Input Cover
 
 ## License
 
@@ -7,7 +7,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 
 ## Layout
 
-The input deck includes the touchpad and keyboard.
+The input cover includes the touchpad and keyboard.
 There is one main PCB, which we will call the touchpad PCB.
 It includes the Pixart 239 touchpad IC and IT8801 keyboard controler.
 
