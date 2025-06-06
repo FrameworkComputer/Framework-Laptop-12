@@ -13,8 +13,8 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 
 ## Mainboard
 
-This folder contains interface schematics to enable Mainboard re-use.
+This folder contains interface documentation to enable Mainboard re-use.
 
 ## Input Cover
 
-This folder contains interface schematics to enable Input Cover re-use.
+This folder contains interface documentation to enable Input Cover re-use.
