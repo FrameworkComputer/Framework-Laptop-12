@@ -9,7 +9,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 
 The input cover includes the touchpad and keyboard.
 There is one main PCB, which we will call the touchpad PCB.
-It includes the Pixart 239 touchpad IC and IT8801 keyboard controler.
+It includes the Pixart PCT2642QC (PLP239 Family) touchpad IC and IT8801 keyboard controler.
 
 The keyboard matrix connects to the touchpad PCB through an FPC connector.
 
