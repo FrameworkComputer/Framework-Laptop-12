@@ -13,6 +13,11 @@ It includes the Pixart PCT2642QC (PLP239 Family) touchpad IC and IT8801 keyboard
 
 The keyboard matrix connects to the touchpad PCB through an FPC connector.
 
+## Touchpad Module Details
+
+For details about the touchpad module, including silkscreen and firmware,
+please refer to [Touchpad.md].
+
 ## Pinouts
 
 ### Touchpad PCB to Mainboard
