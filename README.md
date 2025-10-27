@@ -18,3 +18,7 @@ This folder contains interface documentation to enable Mainboard re-use.
 ## Input Cover
 
 This folder contains interface documentation to enable Input Cover re-use.
+
+## Display
+
+Mechanical design files and pinout of the display.
