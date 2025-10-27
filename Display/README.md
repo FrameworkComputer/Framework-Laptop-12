@@ -71,9 +71,22 @@ Touch
 | VDD33  | Testpoint | 3.3V              |
 | GND    | Testpoint | Ground            |
 
-## Firmware
+## Touch IC Firmware
 
 The touchscreen IC presents as an I2C HID device at address 0x41.
+
+## Firmware Update
+
+Firmware is updated through I2C HID.
+
+Ilitek provides a proprietary windows update tool
+For Linux/ChromeOS they originally provided a [custom update tool](https://github.com/ITS-Tool/ilitek_ld_tool),
+which is now superceded by [fwupd](https://github.com/fwupd/fwupd/tree/main/plugins/ilitek-its) on Linux.
+
+So far Framework has not shipped a public touchscreen firmware update.
+The current and future firmware updates are avilable on [LVFS](https://fwupd.org/lvfs/devices/work.frame.Laptop12.RPL.touchscreen.firmware).
+
+## HID Reports
 Below the HID Report descriptor and details about some reports are documented.
 
 In the BIOS settings the touchscreen can be changed between MPP and USI
