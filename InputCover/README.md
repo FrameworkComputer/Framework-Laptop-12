@@ -25,32 +25,33 @@ please refer to [Touchpad.md].
 Connection is made through an FPC daughterboard that has pads for two sets of 10 pogo pins.
 See the pinout for that on the mainboard README.md
 
-Pinout for touchpad PCB to the daughterboard:
+Pinout for FPC connector on the touchpad PCB to the pogo pin daughterboard.
+The `5VS_TP` and `KBL_P` pins are duplicated on this FPC connector, but not on the pogo pins.
 
-| Pin | Signal     | Notes               |
-|-----|------------|---------------------|
-| 1   | 5VS_TP     |                     |
-| 2   | 5VS_TP     |                     |
-| 3   | KBL_P      |                     |
-| 4   | KBL_P      |                     |
-| 5   | 3VS_TP     |                     |
-| 6   | TP_I2C_CLK | Touchpad I2C        |
-| 7   | TP_I2C_SDA | Touchpad I2C        |
-| 8   | TP_INT#    |                     |
-| 9   | BOARD_ID   |                     |
-| 10  | KB_I2C_SCL | Keyboard I2C        |
-| 11  | KB_I2C_SDA | Keyboard I2C        |
-| 12  | KB_INT     | Keyboard I2C        |
-| 13  | KSI_03_IN  | Shorted to pin 2    |
-| 14  | KSI_03_OUT | Shorted to pin 1    |
-| 15  | KSI_02_IN  | Shorted to pin 4    |
-| 16  | KSI_02_OUT | Shorted to pin 3    |
-| 17  | KSI_00_IN  | Shorted to pin 6    |
-| 18  | KSI_00_OUT | Shorted to pin 5    |
-| 19  | GND        |                     |
-| 20  | GND        |                     |
-| 21  | GND        |                     |
-| 22  | GND        |                     |
+| Pin | Signal     | Notes        |
+|-----|------------|--------------|
+| 1   | 5VS_TP     |              |
+| 2   | 5VS_TP     |              |
+| 3   | KBL_P      |              |
+| 4   | KBL_P      |              |
+| 5   | 3VS_TP     |              |
+| 6   | TP_I2C_CLK | Touchpad I2C |
+| 7   | TP_I2C_SDA | Touchpad I2C |
+| 8   | TP_INT#    |              |
+| 9   | BOARD_ID   |              |
+| 10  | KB_I2C_SCL | Keyboard I2C |
+| 11  | KB_I2C_SDA | Keyboard I2C |
+| 12  | KB_INT     | Keyboard I2C |
+| 13  | KSI_03_IN  |              |
+| 14  | KSI_03_OUT |              |
+| 15  | KSI_02_IN  |              |
+| 16  | KSI_02_OUT |              |
+| 17  | KSI_00_IN  |              |
+| 18  | KSI_00_OUT |              |
+| 19  | GND        |              |
+| 20  | GND        |              |
+| 21  | GND        |              |
+| 22  | GND        |              |
 
 ### Touchpad to Keyboard
 
