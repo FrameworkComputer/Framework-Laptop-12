@@ -28,6 +28,9 @@ See the pinout for that on the mainboard README.md
 Pinout for FPC connector on the touchpad PCB to the pogo pin daughterboard.
 The `5VS_TP` and `KBL_P` pins are duplicated on this FPC connector, but not on the pogo pins.
 
+KSI0, KSI3, and KSO2 are routed to the mainboard and back out for the possibility of letting a future mainboard scan the F1 and F2 keys directly, bypasing the keyboard controller IC.
+On current hardware IN OUT pins are just shorted together on the mainboard.
+
 | Pin | Signal     | Notes        |
 |-----|------------|--------------|
 | 1   | 5VS_TP     |              |
@@ -93,15 +96,57 @@ The `5VS_TP` and `KBL_P` pins are duplicated on this FPC connector, but not on t
 ANSI layout:
 
 ```
+┌─────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐
+│ Esc │F1 │F2 │F3 │F4 │F5 │F6 │F7 │F8 │F9 │F10│F11│F12│ Del│
+├───┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = │Backsp│
+├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+│ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ [ │ ] │ \  │
+├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴────┤
+│ Caps │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ; │ ' │ Enter │
+├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───────┤
+│ Shift  │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ / │  Shift  │
+├────┬───┼───┼───┼───┴───┴───┴───┴───┼───┼───┼───┴┬───┬────┤
+│    │   │   │   │                   │   │   │    │ ↑ │    │
+│Ctrl│FN │WIN│Alt│                   │Alt│Ctl│ ←  ├───┤  → │
+│    │   │   │   │                   │   │   │    │ ↓ │    │
+└────┴───┴───┴───┴───────────────────┴───┴───┴────┴───┴────┘
 |     |Col 0|Col 1|Col 2|Col 3|Col 4|Col 5|Col 6|Col 7|Col 8|Col 9|Col10|Col11|Col12|Col13|Col14|Col15|Col16|Col17|
 |Row 0|     | F11 | F1  | B   | F10 | N   |     |     | =   |     |RAlt |     |     |     |     |     | FN  |     |
 |Row 1|     | ESC | F4  | G   | F7  | F12 | H   |     | '   | F9  |     | Bsp |     |     |LCtrl|     |     |     |
 |Row 2|     | TAB | F3  | T   | F6  | ]   | Y   |     | [   | Del |     | F8  |     |     |     |     |     |     |
-|Row 3| WIN | `   | F2  | 5   | S   |     | -   |     | 6   |     |     | |   |     |     |RCtrl|     |     |     |
+|Row 3| WIN | `   | F2  | 5   | S   |     | -   |     | 6   |     |     | \   |     |     |RCtrl|     |     |     |
 |Row 4|     | A   | D   | F   | F5  | K   | J   |     | ;   | L   |     |Enter|     |     |     |     |     |     |
 |Row 5|     | 1   | ,   | >   | /   | C   |Space|LShft| X   | V   |     | M   |     |     |     |     |     |     |
 |Row 6|     | Z   | 3   | 4   | 2   | 8   | 0   |     | 7   | 9   |     | Down|Left |LAlt |     |CapsL|     |     |
 |Row 7|     | U   | I   | O   | P   | Q   | W   |RShft| E   | R   |     | Up  |Right|     |     |     |     |     |
 ```
 
-Missing on ANSI: 14, 42, 45, 56, 63, 65, 80, 81, 85, 86
+ISO Layout:
+
+```
+┌─────┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬────┐
+│ Esc │F1 │F2 │F3 │F4 │F5 │F6 │F7 │F8 │F9 │F10│F11│F12│ Del│
+├───┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────┤
+│ ` │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ - │ = │Backsp│
+├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬────┤
+│ Tab │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ [ │ ] │Entr│
+├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐   │
+│ Caps │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ; │ ' │ # │   │
+├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴───┤
+│Shft│ \ │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ / │  Shift  │
+├────┼───┼───┼───┼───┴───┴───┴───┴───┼───┼───┼───┴┬───┬────┤
+│    │   │   │   │                   │   │   │    │ ↑ │    │
+│Ctrl│FN │WIN│Alt│                   │Alt│Ctl│ ←  ├───┤  → │
+│    │   │   │   │                   │   │   │    │ ↓ │    │
+└────┴───┴───┴───┴───────────────────┴───┴───┴────┴───┴────┘
+|     |Col 0|Col 1|Col 2|Col 3|Col 4|Col 5|Col 6|Col 7|Col 8|Col 9|Col10|Col11|Col12|Col13|Col14|Col15|Col16|Col17|
+|Row 0|     | F11 | F1  | B   | F10 | N   |     |     | =   |     |RAlt |     |     |     |     |     | FN  |     |
+|Row 1|     | ESC | F4  | G   | F7  | F12 | H   |     | '   | F9  |     | Bsp |     |     |LCtrl|     |     |     |
+|Row 2|     | TAB | F3  | T   | F6  | ]   | Y   |     | [   | Del |     | F8  |     |     |     |     |     |     |
+|Row 3| WIN | `   | F2  | 5   | S   |     | -   |     | 6   |     |     |     |     |     |RCtrl|     |     |     |
+|Row 4|     | A   | D   | F   | F5  | K   | J   |     | ;   | L   |     |Enter|     |     |     |     |     |     |
+|Row 5|     | 1   | ,   | >   | /   | C   |Space|LShft| X   | V   |     | M   |     |     |     |     |     |     |
+|Row 6|     | Z   | 3   | 4   | 2   | 8   | 0   |     | 7   | 9   |     | Down|Left |LAlt |     |CapsL|     | #   |
+|Row 7|     | U   | I   | O   | P   | Q   | W   |RShft| E   | R   |     | Up  |Right|     |     |     |     | \   |
+```
