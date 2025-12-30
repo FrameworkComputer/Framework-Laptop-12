@@ -17,8 +17,7 @@ External 3D CAD of the system and main modules to enable development of 3D-print
 skins, cases, and other accessories.  We're excited to see what you do with it!
 
 ## Mainboard
-
-This folder contains interface documentation to enable Mainboard re-use.
+This folder contains interface and CAD documentation to enable Mainboard re-use.
 
 ## Input Cover
 
