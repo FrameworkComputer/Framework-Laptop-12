@@ -21,7 +21,7 @@ skins, cases, and other accessories.  We're excited to see what you do with it!
 ## Mainboard
 This folder contains interface and CAD documentation to enable Mainboard re-use.
 
-## Input CoverS
+## Input Cover
 
 This folder contains interface documentation to enable Input Cover re-use.
 
