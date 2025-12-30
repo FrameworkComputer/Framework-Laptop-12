@@ -1,4 +1,6 @@
 # Framework Laptop 12
+![FrameworkLaptop12](/Assets/framework_laptop_12.png)
+
 Documentation around the Mainboard and other key parts of Framework Laptop 12 
 (available at https://frame.work/marketplace/mainboards).
 
@@ -17,8 +19,7 @@ External 3D CAD of the system and main modules to enable development of 3D-print
 skins, cases, and other accessories.  We're excited to see what you do with it!
 
 ## Mainboard
-
-This folder contains interface documentation to enable Mainboard re-use.
+This folder contains interface and CAD documentation to enable Mainboard re-use.
 
 ## Input Cover
 
