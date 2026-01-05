@@ -150,3 +150,43 @@ ISO Layout:
 |Row 6|     | Z   | 3   | 4   | 2   | 8   | 0   |     | 7   | 9   |     | Down|Left |LAlt |     |CapsL|     | #   |
 |Row 7|     | U   | I   | O   | P   | Q   | W   |RShft| E   | R   |     | Up  |Right|     |     |     |     | \   |
 ```
+
+### Rollover
+
+Like most laptop keyboards, the Framework Laptop 12 and Laptop 13 do not support full n-key rollover.
+That means the system recognizes only a limited number of keys pressed at the same time.
+
+The limitation is in hardware - the key switches would have to have diodes or other mechanisms to avoid ghosting.
+See: https://en.wikipedia.org/wiki/Key_rollover#Key_jamming_and_ghosting
+
+Framework Laptop 16 was with gaming in mind, where you need to press many keys at the same time.
+It has resistors on each key and uses analog scanning to detect which keys are
+pressed and achieves almost full n-key rollover.
+
+Framework Laptop 12 and 13 do not have any special mechanism.
+They do have a matrix that is optimized to avoid issues with the most common
+key combinations when typing and using shortcuts.
+So while at minimum two, in most cases many more keys, up to 12 keys can be registered at the same time.
+Keys that are commonly used with others are not placed in the same row or column as each other.
+
+See that the control, shift, alt keys, as well as fn, left/right, windows are
+placed in their own column each and not in the same rows.
+
+However, since n-key rollover is not supported and the matrix is a limited size, some combinations are not possible.
+As explained in the linked Wikipedia article, this happens if three keys share the same two rows and same two columns.
+The firmware is not able to determine if three or four keys are pressed - to avoid "ghost keys", it ignores both.
+
+One example of those combinations is: Left/Right Shift + W + Space
+
+```
+|       |Col 6|Col 7|
+| Row 5 |Space|LShft|
+| Row 7 | W   |RShft|
+```
+
+Why we chose this matrix. The Framework Laptop 13 has a custom matrix. When we
+made the Framework Laptop 13 ChromeOS Edition, we had to make a separate
+version of the keyboard and input deck to meet the ChromeOS requirements.
+ChromeOS didn't have a Windows/Linux compatible matrix at that time - now they
+do, so with compatibility in mind, we picked their new standard
+["Straus" Keyboard](https://chromium.googlesource.com/chromiumos/platform/ec/+/HEAD/common/keyboard_strauss.c).
