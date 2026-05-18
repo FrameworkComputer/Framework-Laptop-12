@@ -106,7 +106,7 @@ Pin 1 is top left, counting zigzag left, right, left, right downwards.
 | 5   | 3V_MCU      | 3V Reserved         |
 | 6   | ON_OFF_BTN# | System Power Button |
 | 7   | LED_PWM     | Power Button LED    |
-| 5   | 5V_LED      | Power Button LED    |
+| 8   | 5V_LED      | Power Button LED    |
 
 ## Battery 
 
