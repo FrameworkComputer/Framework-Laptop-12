@@ -28,3 +28,13 @@ This folder contains interface documentation to enable Input Cover re-use.
 ## Display
 
 Mechanical design files and pinout of the display.
+
+## Source code
+
+Is not part of this repo, instead go to:
+
+for Embedded controller firmware:
+https://github.com/FrameworkComputer/EmbeddedController/tree/fwk-sunflower-dahlia-2026-09-30
+
+for the Gen 2 keyboard firmware:
+https://github.com/FrameworkComputer/zmk/tree/pr-dahlia-keyboard
